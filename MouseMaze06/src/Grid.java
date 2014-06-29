@@ -9,7 +9,7 @@ public class Grid {
     public int cost; //cost to be used in the hurstic fucntion
     public int heuristic;
     public long time = System.currentTimeMillis();
-    public int dimension=6;
+    public int dimension=7;
     
     public Grid(){
     	grid=new char[dimension][dimension];
@@ -27,12 +27,13 @@ public class Grid {
     	break;
         case "normal":  
             grid = new char[][]{
-                {' ', ' ', '<', '>', '<', '>'},
-                {' ', '<', '>', '<', '>', '^'},
-                {' ', ' ', 'B', 'A', '^', '|'},
-                {'<', '>', '<', '>', 'v', 'v'},
-                {'^', ' ', ' ', '^', '<', '>'},
-                {'v', ' ', ' ', 'v', '<', '>'}};
+                {' ', ' ', '<', '>', '<', '>',' '},
+                {' ', '<', '>', '<', '>', '^',' '},
+                {' ', ' ', 'B', 'A', '^', '|',' '},
+                {'<', '>', '<', '>', 'v', 'v',' '},
+                {'^', ' ', ' ', '^', '<', '>',' '},
+                {'v', ' ', ' ', 'v', '<', '>',' '},
+                {' ', ' ', ' ', ' ', ' ', ' ',' '}};
         break;
         case "hard":  
             grid = new char[][]{
