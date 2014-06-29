@@ -9,7 +9,7 @@ public class Test {
     	grid.show();
         System.out.println("l:left; r:right; u:up; d:down; h:head; t:tail");
         System.out.println("rules:left and right move together, up and down move together, head and tail move together");
-        System.out.println("once the head is move to position[2][5], it wins!");
+        System.out.println("once the head is move to position[2][5], it wins!!");
     	if (method.equalsIgnoreCase("DepthFirst")) {
     		DepthFirst method2 = new DepthFirst(grid);
             method2.perform();
