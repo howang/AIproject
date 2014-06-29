@@ -86,25 +86,14 @@ public class Method{
                             }
                         } catch (Exception e) {
                         }
-
                         break;
-
                 }
             }
         }
     }
 
-<<<<<<< HEAD
     public boolean success(char[][] board) {
         if (board[2][5] == 'A') {
-=======
-    public boolean isGoal(char[][] board) {
-<<<<<<< HEAD
-        if (board[4][5] == 'A') {
->>>>>>> FETCH_HEAD
-=======
-        if (board[2][6] == 'A') {
->>>>>>> FETCH_HEAD
         	System.out.println("25 is "+board[2][5]);
             return true;
         }

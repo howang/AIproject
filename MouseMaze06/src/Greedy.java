@@ -31,13 +31,10 @@ public class Greedy extends Method {
                     temp.ShowProcess();
                     temp.show();
                 System.out.println("Game Over --Solution FOUND");
-<<<<<<< HEAD
+
                 System.out.println("Nodes Explored :" + this.gridPassed.size());
                 //System.out.println("Nodes Explored- :" + this.numGrid);
-=======
-                System.out.println("Nodes Explored :" + this.explored.size());
-                //System.out.println("Nodes Explored- :" + this.explored_nodes);
->>>>>>> FETCH_HEAD
+
 
                 long total_time = System.currentTimeMillis() - start_time;
                 System.out.println("Time Spent :" + total_time + " ms");
@@ -49,11 +46,7 @@ public class Greedy extends Method {
         System.out.println("EMPTY QUEUE");
         long total_time = System.currentTimeMillis() - start_time;
         System.out.println("Time Spent :" + total_time + " ms");
-<<<<<<< HEAD
         System.out.println("Nodes Explored :" + this.gridPassed.size());
-=======
-        System.out.println("Nodes Explored :" + this.explored.size());
->>>>>>> FETCH_HEAD
         //System.out.println("Nodes Explored- :" + this.explored_nodes);
 
         if (success(temp.grid)) {
@@ -63,7 +56,6 @@ public class Greedy extends Method {
             System.out.println("Game Over --Solution NOT found");
         }
     }
-
     public void addtoQueue(Grid board) {
         BlockingTilesHeuristic BlockingTilesHeuristic = new BlockingTilesHeuristic();
         board.heuristic = BlockingTilesHeuristic.score(board.grid);
