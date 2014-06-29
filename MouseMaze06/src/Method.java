@@ -94,8 +94,13 @@ public class Method{
         }
     }
 
+<<<<<<< HEAD
     public boolean success(char[][] board) {
         if (board[2][5] == 'A') {
+=======
+    public boolean isGoal(char[][] board) {
+        if (board[4][5] == 'A') {
+>>>>>>> FETCH_HEAD
         	System.out.println("25 is "+board[2][5]);
             return true;
         }

@@ -3,12 +3,16 @@
  */
 public class Test {
     public static void main(String[] args) {
-    	String method="AStar";//DepthFirst,IterativeDepthFirst,BreathFirst,Greed,AStar
+    	String method="Greedy";//DepthFirst,IterativeDepthFirst,BreathFirst,Greed,AStar
     	String level="normal";//easy,normal,hard
     	Grid grid=new Grid(level);
     	grid.show();
+<<<<<<< HEAD
+        System.out.println("<:left; >:right; ^:up; v:down; A:head; B:tail");
+=======
         System.out.println("move direction:\r"
         		+ "<; r:>; ^:up; v:down; A:head; B:tail");
+>>>>>>> FETCH_HEAD
         System.out.println("rules:left and right move together, up and down move together, head and tail move together");
         System.out.println("once the head is move to position[2][5], it wins!");
     	if (method.equalsIgnoreCase("DepthFirst")) {

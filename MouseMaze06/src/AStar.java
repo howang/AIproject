@@ -10,7 +10,7 @@ public class AStar extends Method {
     int heuristic;
     public AStar(Grid start, int heuristic) {
         this.heuristic = heuristic;
-        Comparator<Grid> comparator = new BoardLengthComparator_Astar();
+        Comparator<Grid> comparator = new AStarDistance();
         queue = new PriorityQueue<>(1, comparator);
         queue.add(start);
     }

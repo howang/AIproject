@@ -10,7 +10,7 @@ public class Greedy extends Method {
 
     public Greedy(Grid start, int heuristic) {
         this.heuristic = heuristic;
-        Comparator<Grid> comparator = new BoardLengthComparator();
+        Comparator<Grid> comparator = new Distance();
         queue = new PriorityQueue<>(1, comparator);
         queue.add(start);
     }
