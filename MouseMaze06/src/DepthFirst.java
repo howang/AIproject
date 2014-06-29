@@ -23,12 +23,12 @@ public class DepthFirst extends Method {
         possibleMoves(temp);//add to stack
         while (stack.size() != 0) {
             System.out.println("size : " + stack.size());
-            if (isGoal(temp.grid)) {
+            if (success(temp.grid)) {
                     temp.ShowProcess();;
                     temp.show();;
                 System.out.println("gameover");
-                System.out.println("Nodes Explored :" + this.explored.size());
-                System.out.println("Nodes Explored- :" + this.explored_nodes);
+                System.out.println("Nodes Explored :" + this.gridPassed.size());
+                //System.out.println("Nodes Explored- :" + this.explored_nodes);
 
                 long total_time = System.currentTimeMillis() - start_time;
                 System.out.println("Time Spent :" + total_time + " ms");
@@ -42,10 +42,10 @@ public class DepthFirst extends Method {
         long total_time = System.currentTimeMillis() - start_time;
         System.out.println("Time Spent :" + total_time + " ms");
 //        temp.visualize();
-        System.out.println("Nodes Explored :" + this.explored.size());
-        System.out.println("Nodes Explored- :" + this.explored_nodes);
+        System.out.println("Nodes Explored :" + this.gridPassed.size());
+        //System.out.println("Nodes Explored- :" + this.explored_nodes);
 
-        if (isGoal(temp.grid)) {
+        if (success(temp.grid)) {
                 temp.ShowProcess();;
             System.out.println("Game Over --Solution FOUND");
         } else {
@@ -54,7 +54,7 @@ public class DepthFirst extends Method {
     }
     @Override
     public void addtoQueue(Grid board) {
-        this.explored_nodes++;
+        //this.explored_nodes++;
         this.stack.add(board);
     }
 }

@@ -35,12 +35,12 @@ public class IterativeDepthFirst extends Method {
                     System.out.println("Queue is Empty");
                     break;
                 }
-                if (isGoal(temp.grid)) {
+                if (success(temp.grid)) {
                         temp.ShowProcess();
                         temp.show();
                     System.out.println("gameover");
                     System.out.println("Queue Size :" + this.queue.size());
-                System.out.println("Nodes Explored :" + this.explored_nodes);
+                //System.out.println("Nodes Explored :" + this.numGrid);
                     System.out.println("Current Level " + current_level);
                     long total_time = System.currentTimeMillis() - start_time;
                     System.out.println("Time Spent :" + total_time + " ms");
@@ -51,14 +51,14 @@ public class IterativeDepthFirst extends Method {
             } catch (Exception e) {
                 System.out.println("Game Over --Solution NOT found");
                 System.out.println("Queue Size :" + this.queue.size());
-                System.out.println("Nodes Explored :" + this.explored_nodes);
+                //System.out.println("Nodes Explored :" + this.numGrid);
 
                 long total_time = System.currentTimeMillis() - start_time;
                 System.out.println("Time Spent :" + total_time + " ms");
             } catch (OutOfMemoryError e) {
                 System.out.println("Game Over --Solution NOT found");
                 System.out.println("Queue Size :" + this.queue.size());
-                System.out.println("Nodes Explored :" + this.explored_nodes);
+                //System.out.println("Nodes Explored :" + this.numGrid);
 
                 long total_time = System.currentTimeMillis() - start_time;
                 System.out.println("Time Spent :" + total_time + " ms");
@@ -68,8 +68,8 @@ public class IterativeDepthFirst extends Method {
         System.out.println("EMPTY QUEUE");
         long total_time = System.currentTimeMillis() - start_time;
         System.out.println("Time Spent :" + total_time + " ms");
-        System.out.println("Nodes Explored :" + this.explored_nodes);
-        if (isGoal(temp.grid)) {
+        //System.out.println("Nodes Explored :" + this.numGrid);
+        if (success(temp.grid)) {
                 temp.ShowProcess();
             System.out.println("Game Over --Solution FOUND");
         } else {
@@ -78,7 +78,7 @@ public class IterativeDepthFirst extends Method {
     }
     @Override
     public void addtoQueue(Grid board) {
-        this.explored_nodes++;
+        //this.numGrid++;
         this.queue.add(board);
     }
 

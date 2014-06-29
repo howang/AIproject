@@ -4,23 +4,23 @@ import java.util.*;
  */
 public class Method{
 
-    Queue<Grid> explored;
-    int explored_nodes = 0;
-
-    public void clearExplored() {
-        this.explored = new LinkedList<Grid>();
+    Queue<Grid> gridPassed;
+    //int numGrid = 0;
+    
+    public Method() {
+        gridPassed = new LinkedList<Grid>();
     }
 
-    public Method() {
-        explored = new LinkedList<>();
+    public void cleargridPassed() {
+        this.gridPassed = new LinkedList<Grid>();
     }
 
     public void perform() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        //throw new UnsupportedOperationException("Not supported yet.");
     }
 
     public void addtoQueue(Grid board) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        //throw new UnsupportedOperationException("Not supported yet.");
     }
 
     public void possibleMoves(Grid b) {
@@ -35,10 +35,10 @@ public class Method{
                         try {
                             if (b.grid[i][j - 1] == ' ') {
                                 tempBoard.grid = tempBoard.move(tempBoard.grid, i, j, '<');
-                                if (tempBoard.canAdd(tempBoard.grid, this.explored)) {
+                                if (tempBoard.canAdd(tempBoard.grid, this.gridPassed)) {
                                     tempBoard.lastGrid = b;
                                     addtoQueue(tempBoard);
-                                    explored.add(tempBoard);
+                                    gridPassed.add(tempBoard);
                                 }
                             }
                         } catch (Exception e) {
@@ -50,10 +50,10 @@ public class Method{
                         try {
                             if (b.grid[i][j + 1] == ' ') {
                                 tempBoard.grid = tempBoard.move(tempBoard.grid, i, j, '>');
-                                if (tempBoard.canAdd(tempBoard.grid, this.explored)) {
+                                if (tempBoard.canAdd(tempBoard.grid, this.gridPassed)) {
                                     tempBoard.lastGrid = b;
                                     addtoQueue(tempBoard);
-                                    explored.add(tempBoard);
+                                    gridPassed.add(tempBoard);
                                 }
                             }
                         } catch (Exception e) {
@@ -64,10 +64,10 @@ public class Method{
                         try {
                             if (b.grid[i - 1][j] == ' ') {
                                 tempBoard.grid = tempBoard.move(tempBoard.grid, i, j, '^');
-                                if (tempBoard.canAdd(tempBoard.grid, this.explored)) {
+                                if (tempBoard.canAdd(tempBoard.grid, this.gridPassed)) {
                                     tempBoard.lastGrid = b;
                                     addtoQueue(tempBoard);
-                                    explored.add(tempBoard);
+                                    gridPassed.add(tempBoard);
                                 }
                             }
                         } catch (Exception e) {
@@ -78,10 +78,10 @@ public class Method{
                         try {
                             if (b.grid[i + 1][j] == ' ') {
                                 tempBoard.grid = tempBoard.move(tempBoard.grid, i, j, 'v');
-                                if (tempBoard.canAdd(tempBoard.grid, this.explored)) {
+                                if (tempBoard.canAdd(tempBoard.grid, this.gridPassed)) {
                                     tempBoard.lastGrid = b;
                                     addtoQueue(tempBoard);
-                                    explored.add(tempBoard);
+                                    gridPassed.add(tempBoard);
                                 }
                             }
                         } catch (Exception e) {
@@ -94,7 +94,7 @@ public class Method{
         }
     }
 
-    public boolean isGoal(char[][] board) {
+    public boolean success(char[][] board) {
         if (board[2][5] == 'A') {
         	System.out.println("25 is "+board[2][5]);
             return true;

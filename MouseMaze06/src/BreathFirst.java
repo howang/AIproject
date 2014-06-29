@@ -22,13 +22,13 @@ public class BreathFirst extends Method {
         possibleMoves(temp);
         while (queue.size() != 0) {
             System.out.println("size : " + queue.size());
-            if (isGoal(temp.grid)) {
+            if (success(temp.grid)) {
                     temp.ShowProcess();
                     System.out.println("foolowing is temp");
                     temp.show();
                 System.out.println("gameover");
-                System.out.println("Nodes Explored :" + this.explored.size());
-                System.out.println("Nodes Explored- :" + this.explored_nodes);
+                System.out.println("Nodes Explored :" + this.gridPassed.size());
+                //System.out.println("Nodes Explored- :" + this.explored_nodes);
                 long total_time = System.currentTimeMillis() - start_time;
                 System.out.println("Time Spent :" + total_time + " ms");
                 return;
@@ -39,9 +39,9 @@ public class BreathFirst extends Method {
         System.out.println("EMPTY QUEUE");
         long total_time = System.currentTimeMillis() - start_time;
         System.out.println("Time Spent :" + total_time + " ms");
-        System.out.println("Nodes Explored :" + this.explored.size());
-        System.out.println("Nodes Explored- :" + this.explored_nodes);
-        if (isGoal(temp.grid)) {
+        System.out.println("Nodes Explored :" + this.gridPassed.size());
+        //System.out.println("Nodes Explored- :" + this.explored_nodes);
+        if (success(temp.grid)) {
                 temp.ShowProcess();
             System.out.println("Game Over --Solution FOUND");
         } else {
@@ -50,7 +50,7 @@ public class BreathFirst extends Method {
     }
     @Override
     public void addtoQueue(Grid board) {
-        this.explored_nodes++;
+        //this.explored_nodes++;
         this.queue.add(board);
     }
 }
