@@ -1,9 +1,9 @@
 /AStar.class
+/AStarDistance.class
 /BlockingTilesHeuristic.class
-/BoardLengthComparator.class
-/BoardLengthComparator_Astar.class
 /BreathFirst.class
 /DepthFirst.class
+/Distance.class
 /Greedy.class
 /Grid.class
 /IterativeDepthFirst.class
@@ -11,6 +11,3 @@
 /Method.class
 /Test.class
 /heuristic.class
-/AStarDistance.class
-/Dsitance.class
-/Distance.class

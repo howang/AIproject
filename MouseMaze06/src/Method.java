@@ -95,7 +95,7 @@ public class Method{
     }
 
     public boolean isGoal(char[][] board) {
-        if (board[4][5] == 'A') {
+        if (board[2][6] == 'A') {
         	System.out.println("25 is "+board[2][5]);
             return true;
         }

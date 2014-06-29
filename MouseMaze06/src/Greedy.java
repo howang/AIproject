@@ -32,7 +32,7 @@ public class Greedy extends Method {
                     temp.show();
                 System.out.println("Game Over --Solution FOUND");
                 System.out.println("Nodes Explored :" + this.explored.size());
-                System.out.println("Nodes Explored- :" + this.explored_nodes);
+                //System.out.println("Nodes Explored- :" + this.explored_nodes);
 
                 long total_time = System.currentTimeMillis() - start_time;
                 System.out.println("Time Spent :" + total_time + " ms");
@@ -45,7 +45,7 @@ public class Greedy extends Method {
         long total_time = System.currentTimeMillis() - start_time;
         System.out.println("Time Spent :" + total_time + " ms");
         System.out.println("Nodes Explored :" + this.explored.size());
-        System.out.println("Nodes Explored- :" + this.explored_nodes);
+        //System.out.println("Nodes Explored- :" + this.explored_nodes);
 
         if (isGoal(temp.grid)) {
                 temp.ShowProcess();
