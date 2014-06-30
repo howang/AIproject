@@ -93,7 +93,7 @@ public class Method{
     }
 
     public boolean success(char[][] board) {
-        if (board[2][5] == 'A') {
+        if (board[2][5] == 'B') {
         	System.out.println("25 is "+board[2][5]);
             return true;
         }
